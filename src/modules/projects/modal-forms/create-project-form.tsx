@@ -8,14 +8,13 @@ import {
 } from "@/components/ui/sheet"
 import { useGetCreate } from "@/hooks/use-create-modal"
 import React from "react"
-import { SubmitHandler, useForm } from "react-hook-form"
+import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { z } from "zod"
 import { projectCreateSchema } from "../schema/project-schemas"
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -25,7 +24,7 @@ import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Textarea } from "@/components/ui/textarea"
 import { trpc } from "@/trpc/client"
-import { Loader, Loader2 } from "lucide-react"
+import { Loader2 } from "lucide-react"
 import { toast } from "sonner"
 type ProjectCreateSchemaType = z.infer<typeof projectCreateSchema>
 type ProjectFormPropTypes = {
