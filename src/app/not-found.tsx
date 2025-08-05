@@ -8,11 +8,12 @@ export default function NotFound() {
       <code className="text-6xl font-bold text-red-500">404</code>
       <h2 className="text-3xl font-bold">Oops! Page Not Found</h2>
       <p className="text-lg">
-        We're sorry, but the page you're looking for doesn't exist.
+        We&apos;re sorry, but the page you&apos;re looking for doesn&apos;t
+        exist.
       </p>
       <Link
         href="/"
-        className="mt-4 inline-flex bg-primary font-medium text-secondary py-2 px-4 rounded-full  items-center gap-2"
+        className="mt-4 inline-flex bg-primary font-medium text-secondary py-2 px-4 rounded-full items-center gap-2"
       >
         <ArrowLeft /> Return Home
       </Link>

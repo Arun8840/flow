@@ -5,7 +5,6 @@ import { SidebarTrigger } from "@/components/ui/sidebar"
 import { Skeleton } from "@/components/ui/skeleton"
 import { trpc } from "@/trpc/client"
 import { SignedIn, UserButton } from "@clerk/nextjs"
-import { Workflow } from "lucide-react"
 import React from "react"
 
 interface DashboardNavProps {
@@ -14,7 +13,7 @@ interface DashboardNavProps {
 const DashboardNav: React.FC<DashboardNavProps> = ({
   showSidebarTrigger = false,
 }) => {
-  const { data: user, isLoading } = trpc.getUser.useQuery()
+  const { isLoading } = trpc.getUser.useQuery()
 
   if (isLoading) {
     return <Skeleton className="w-full h-10 rounded-none" />
