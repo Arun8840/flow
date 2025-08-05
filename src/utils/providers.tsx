@@ -5,8 +5,7 @@ import { ClerkProvider } from "@clerk/nextjs"
 import React, { HTMLAttributes } from "react"
 import { NuqsAdapter } from "nuqs/adapters/next/app"
 
-interface ProvidersProps extends HTMLAttributes<HTMLDivElement> {}
-const Providers: React.FC<ProvidersProps> = ({ children }) => {
+const Providers: React.FC<HTMLAttributes<HTMLDivElement>> = ({ children }) => {
   return (
     <>
       <ClerkProvider>

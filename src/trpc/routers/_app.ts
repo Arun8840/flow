@@ -8,7 +8,7 @@ import { eq } from "drizzle-orm"
 
 export const appRouter = createTRPCRouter({
   getUser: protectedProcedure.query(async ({ ctx }) => {
-    const { clerkUserId: userId, authenticated } = ctx
+    const { clerkUserId: userId } = ctx
 
     if (!userId) {
       throw new TRPCError({
